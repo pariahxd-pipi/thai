@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2026 中科大泰好玩</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007AFF">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f3f4f6; -webkit-tap-highlight-color: transparent; }
+        .day-section { display: none; }
+        .day-section.active { display: block; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 12px; padding: 16px; }
+        .nav-btn { background: #007AFF; color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; display: flex; align-items: center; gap: 4px; }
+        .tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: bold; margin-right: 4px; }
+        .tag-food { background: #fee2e2; color: #ef4444; }
+        .tag-spot { background: #dbeafe; color: #3b82f6; }
+        .tag-buy { background: #fef3c7; color: #d97706; }
+        .sticky-nav { position: sticky; top: 0; z-index: 50; background: white; border-bottom: 1px solid #e5e7eb; overflow-x: auto; white-space: nowrap; }
+    </style>
+</head>
+<body class="pb-24">
+
+    <header class="p-4 bg-white border-b flex justify-between items-center">
+        <h1 class="text-xl font-bold">🇹🇭 2026 泰好玩</h1>
+        <span class="text-xs text-gray-400">3/4 - 3/8</span>
+    </header>
+
+    <div class="sticky-nav flex p-2 gap-2 no-scrollbar">
+        <button onclick="showDay(1)" class="day-btn px-4 py-2 rounded-full bg-black text-white text-sm" id="btn1">D1</button>
+        <button onclick="showDay(2)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn2">D2</button>
+        <button onclick="showDay(3)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn3">D3</button>
+        <button onclick="showDay(4)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn4">D4</button>
+        <button onclick="showDay(5)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn5">D5</button>
+        <button onclick="showDay('info')" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btninfo">資訊</button>
+    </div>
+
+    <main class="p-4" id="content">
+        <div id="day1" class="day-section active">
+            <div class="card bg-blue-50">
+                <div class="text-xs text-blue-600 font-bold">航班 3/4 ✈️ BR211</div>
+                [cite_start]<div class="text-sm">08:25 TPE -> 11:30 BKK [cite: 3, 4, 9]</div>
+            </div>
+            <div class="card">
+                <div class="flex justify-between"><div><span class="tag tag-food">中餐</span><b class="text-lg text-gray-800">Oxygen Beachfront</b></div><a href="https://maps.google.com/?q=The+Oxygen+Beachfront+Oasis" class="nav-btn">導航</a></div>
+                [cite_start]<p class="text-sm text-gray-500 mt-1">絕美海景網美餐廳 [cite: 11, 12]</p>
+            </div>
+            <div class="card border-l-4 border-blue-400">
+                <div class="flex justify-between"><div><span class="tag tag-spot">住宿</span><b class="text-lg">Grande Centre Point</b></div><a href="https://maps.google.com/?q=Grande+Centre+Point+Pattaya" class="nav-btn">導航</a></div>
+                [cite_start]<p class="text-sm text-gray-500 mt-1">15:00 入住，芭提雅格蘭德中心 [cite: 13, 15]</p>
+            </div>
+            <div class="card">
+                <div class="flex justify-between"><div><span class="tag tag-food">晚餐</span><b class="text-lg">The Sky Gallery</b></div><a href="https://maps.google.com/?q=The+Sky+Gallery" class="nav-btn">導航</a></div>
+                [cite_start]<p class="text-sm font-bold text-red-500 mt-1">重要預約：@theskygallery [cite: 18]</p>
+            </div>
+        </div>
+
+        <div id="day3" class="day-section">
+            <div class="card">
+                <div class="flex justify-between"><div><span class="tag tag-spot">老城</span><b class="text-lg text-gray-800">嵩越路文青街</b></div><a href="https://maps.google.com/?q=Song+Wat+Rd" class="nav-btn">導航</a></div>
+                <p class="text-sm text-gray-600 mt-2"><b>🔥 必吃美食：</b><br>
+                [cite_start]• <b>牛面王</b>：厚切牛肉麵 [cite: 44]<br>
+                [cite_start]• <b>Pieces Café</b>：必點<b>乳頭麵包</b> [cite: 45]</p>
+            </div>
+            <div class="card">
+                <div class="flex justify-between"><div><span class="tag tag-buy">必買</span><b class="text-lg text-gray-800">Big C 超市</b></div><a href="https://maps.google.com/?q=Big+C+Place+Ratchadaphisek" class="nav-btn">導航</a></div>
+                [cite_start]<p class="text-sm text-gray-500 mt-1">19:00 伴手禮採買時間 [cite: 54, 57]</p>
+            </div>
+            <div class="card">
+                <div class="flex justify-between"><div><span class="tag tag-food">晚餐</span><b class="text-lg text-gray-800">喬德夜市</b></div><a href="https://maps.google.com/?q=Jodd+Fairs+Ratchada" class="nav-btn">導航</a></div>
+                <p class="text-sm text-gray-600 mt-2"><b>🔥 攻略：</b><br>
+                [cite_start]• <b>火山排骨</b>：認明最大攤 [cite: 62]<br>
+                [cite_start]• <b>水果西施</b>：現打果昔 [cite: 63]</p>
+            </div>
+        </div>
+
+        <div id="dayinfo" class="day-section">
+            <div class="card">
+                <h3 class="font-bold border-b pb-2 mb-2">🚨 緊急聯絡</h3>
+                <p class="text-sm">報警/急救：191 / 1669</p>
+                <p class="text-sm">觀光警察：1155</p>
+            </div>
+            <div class="card">
+                <h3 class="font-bold border-b pb-2 mb-2">💰 預算管理</h3>
+                <div class="grid grid-cols-2 text-sm gap-2">
+                    <div>交通預算: 3500 THB</div>
+                    <div>飲食預算: 5000 THB</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showDay(day) {
+            document.querySelectorAll('.day-section').forEach(s => s.classList.remove('active'));
+            document.getElementById('day' + day).classList.add('active');
+            document.querySelectorAll('.day-btn').forEach(b => {
+                b.classList.replace('bg-black', 'bg-white');
+                b.classList.replace('text-white', 'text-gray-600');
+            });
+            document.getElementById('btn' + day).classList.replace('bg-white', 'bg-black');
+            document.getElementById('btn' + day).classList.replace('text-gray-600', 'text-white');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
