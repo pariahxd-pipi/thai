@@ -13,37 +13,24 @@
 <meta name="theme-color" content="#007AFF">
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-body { font-family: 'Noto Sans TC', sans-serif; background:#f3f4f6; -webkit-tap-highlight-color: transparent; }
-.day-section { display:none; }
-.day-section.active { display:block; }
-.card { background:white; border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,0.1); margin-bottom:12px; padding:16px; }
-.nav-btn { background:#007AFF; color:white; padding:4px 12px; border-radius:15px; font-size:0.8rem; display:flex; align-items:center; gap:4px; }
-.tag { font-size:0.7rem; padding:2px 8px; border-radius:4px; font-weight:bold; margin-right:4px; }
-.tag-food { background:#fee2e2; color:#ef4444; }
-.tag-spot { background:#dbeafe; color:#3b82f6; }
-.tag-buy { background:#fef3c7; color:#d97706; }
-.sticky-nav { position:sticky; top:0; z-index:50; background:white; border-bottom:1px solid #e5e7eb; overflow-x:auto; white-space:nowrap; }
+body { font-family:'Noto Sans TC',sans-serif;background:#f3f4f6;-webkit-tap-highlight-color:transparent;}
+.day-section{display:none;}
+.day-section.active{display:block;}
+.card{background:white;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,0.1);margin-bottom:12px;padding:16px;}
+.nav-btn{background:#007AFF;color:white;padding:4px 12px;border-radius:15px;font-size:0.8rem;}
+.tag{font-size:0.7rem;padding:2px 8px;border-radius:4px;font-weight:bold;margin-right:4px;}
+.tag-food{background:#fee2e2;color:#ef4444;}
+.tag-spot{background:#dbeafe;color:#3b82f6;}
+.tag-buy{background:#fef3c7;color:#d97706;}
+.sticky-nav{position:sticky;top:0;z-index:50;background:white;border-bottom:1px solid #e5e7eb;overflow-x:auto;white-space:nowrap;}
 </style>
 </head>
 
 <body class="pb-24">
 
-<!-- Splash -->
-<div id="splash" style="
-position:fixed;
-inset:0;
-background:#007AFF;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-font-weight:bold;
-z-index:9999;
-transition:opacity 0.4s;">
+<div id="splash" style="position:fixed;inset:0;background:#007AFF;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:bold;z-index:9999;transition:opacity 0.4s;">
 🇹🇭 泰好玩
 </div>
 
@@ -58,108 +45,175 @@ transition:opacity 0.4s;">
 <button onclick="showDay(3)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn3">D3</button>
 <button onclick="showDay(4)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn4">D4</button>
 <button onclick="showDay(5)" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btn5">D5</button>
-<button onclick="showDay('info')" class="day-btn px-4 py-2 rounded-full bg-white text-gray-600 text-sm border" id="btninfo">資訊</button>
 </div>
 
 <main class="p-4">
 
-<!-- D1 -->
+<!-- DAY1 -->
 <div id="day1" class="day-section active">
 <div class="card bg-blue-50">
-<div class="text-xs text-blue-600 font-bold">航班 3/4 ✈️ BR211</div>
-<div class="text-sm">08:25 TPE → 11:30 BKK</div>
+<div class="text-xs text-blue-600 font-bold">✈️ 去程 BR211</div>
+<div class="text-sm">TPE 08:25 → BKK 11:30</div>
 </div>
 
 <div class="card">
-<div class="flex justify-between">
-<div><span class="tag tag-food">中餐</span><b class="text-lg text-gray-800">Oxygen Beachfront</b></div>
-<a href="https://maps.google.com/?q=The+Oxygen+Beachfront+Oasis" class="nav-btn">導航</a>
-</div>
-<p class="text-sm text-gray-500 mt-1">絕美海景網美餐廳</p>
-</div>
-
-<div class="card border-l-4 border-blue-400">
-<div class="flex justify-between">
-<div><span class="tag tag-spot">住宿</span><b class="text-lg">Grande Centre Point</b></div>
-<a href="https://maps.google.com/?q=Grande+Centre+Point+Pattaya" class="nav-btn">導航</a>
-</div>
-<p class="text-sm text-gray-500 mt-1">15:00 入住，芭提雅格蘭德中心</p>
+<span class="tag tag-food">中餐</span>
+<b>The Oxygen Beachfront Oasis</b>
+<br><a href="https://maps.app.goo.gl/obMNjNzMTqcQWQW97" class="nav-btn mt-2 inline-block">導航</a>
 </div>
 
 <div class="card">
-<div class="flex justify-between">
-<div><span class="tag tag-food">晚餐</span><b class="text-lg">The Sky Gallery</b></div>
-<a href="https://maps.google.com/?q=The+Sky+Gallery" class="nav-btn">導航</a>
+<span class="tag tag-spot">住宿</span>
+<b>芭提雅格蘭德中心大飯店</b>
+<p class="text-sm text-gray-500 mt-1">15:00 入住｜交通約1小時30分</p>
+<a href="https://maps.app.goo.gl/qDwjtVgg5ydUzMR8A" class="nav-btn mt-2 inline-block">導航</a>
 </div>
-<p class="text-sm font-bold text-red-500 mt-1">重要預約：@theskygallery</p>
+
+<div class="card">
+<span class="tag tag-food">晚餐</span>
+<b>The Sky Gallery</b>
+<p class="text-sm text-gray-600 mt-1">LINE預約：@theskygallery</p>
+<a href="https://maps.app.goo.gl/jnu8dru762q3XebG8" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+<div class="card">
+<span class="tag tag-spot">夜市</span>
+<b>芭達雅飛機夜市</b>
+<br><a href="https://maps.app.goo.gl/9E9G6LtpKhqDhKu27" class="nav-btn mt-2 inline-block">導航</a>
 </div>
 </div>
 
-<!-- D2 -->
+<!-- DAY2 -->
 <div id="day2" class="day-section">
-<div class="card"><b class="text-lg">D2 行程</b><p class="text-sm text-gray-500 mt-1">（待補）</p></div>
+<div class="card">
+<b>退房去曼谷 11:00</b>
 </div>
 
-<!-- D3 -->
+<div class="card">
+<span class="tag tag-spot">住宿</span>
+<b>Somerset Rama 9 Bangkok</b>
+<p class="text-sm text-gray-500 mt-1">15:00 入住</p>
+<a href="https://maps.app.goo.gl/yq2Uet3JoU7GexAQA" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+<div class="card">
+<b>Central Rama9 / Fortune Town</b>
+<br>
+<a href="https://maps.app.goo.gl/yHyXeSWY12YRQ7ug9" class="nav-btn mt-2 inline-block">Central Rama9</a>
+<a href="https://maps.app.goo.gl/WKyRYEaKG4dh6e8v8" class="nav-btn mt-2 inline-block">Fortune Town</a>
+</div>
+
+<div class="card">
+<b>Save One Go Market 19:00</b>
+<p class="text-sm text-gray-500">BTS Yaek Kor Por Aor 4號出口</p>
+<a href="https://maps.app.goo.gl/xeRFoUx7MbhXuvH98" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+</div>
+<!-- DAY3 -->
 <div id="day3" class="day-section">
+
 <div class="card">
-<div class="flex justify-between">
-<div><span class="tag tag-spot">老城</span><b class="text-lg text-gray-800">嵩越路文青街</b></div>
-<a href="https://maps.google.com/?q=Song+Wat+Rd" class="nav-btn">導航</a>
-</div>
-<p class="text-sm text-gray-600 mt-2">
-🔥 必吃美食：<br>
-• <b>牛面王</b>：厚切牛肉麵<br>
-• <b>Pieces Café</b>：必點乳頭麵包
-</p>
+<span class="tag tag-spot">嵩越路 10:00</span>
+<p class="text-sm text-gray-600 mt-1">MRT 藍線 Wat Mangkon 1或3號出口</p>
+<ul class="text-sm mt-2 list-disc pl-5">
+<li>牛面王</li>
+<li>Gu Long Bao 古籠包</li>
+<li>Rong Klann Nuea 厚切牛肉麵</li>
+<li>Pieces Café 乳頭麵包</li>
+</ul>
+<a href="https://maps.app.goo.gl/4xZik5HRbPwMvPSV6" class="nav-btn mt-2 inline-block">導航</a>
 </div>
 
 <div class="card">
-<div class="flex justify-between">
-<div><span class="tag tag-buy">必買</span><b class="text-lg text-gray-800">Big C 超市</b></div>
-<a href="https://maps.google.com/?q=Big+C+Place+Ratchadaphisek" class="nav-btn">導航</a>
-</div>
-<p class="text-sm text-gray-500 mt-1">19:00 伴手禮採買時間</p>
+<span class="tag tag-spot">Central Park 14:00</span>
+<p class="text-sm text-gray-600 mt-1">MRT Silom / BTS Sala Daeng</p>
+<ul class="text-sm mt-2 list-disc pl-5">
+<li>Thong Smith 船麵</li>
+<li>Somboon Seafood 建興酒家</li>
+</ul>
+<a href="https://maps.app.goo.gl/MDwNRDEvXQThnF6p8" class="nav-btn mt-2 inline-block">導航</a>
 </div>
 
 <div class="card">
-<div class="flex justify-between">
-<div><span class="tag tag-food">晚餐</span><b class="text-lg text-gray-800">喬德夜市</b></div>
-<a href="https://maps.google.com/?q=Jodd+Fairs+Ratchada" class="nav-btn">導航</a>
-</div>
-<p class="text-sm text-gray-600 mt-2">
-🔥 攻略：<br>
-• <b>火山排骨</b>：認明最大攤<br>
-• <b>水果西施</b>：現打果昔
-</p>
-</div>
+<span class="tag tag-buy">Big C 19:00</span>
+<p class="text-sm text-gray-600 mt-1">Thailand Cultural Centre 4號出口</p>
+<a href="https://maps.app.goo.gl/tUNr44bybVTUhX5n9" class="nav-btn mt-2 inline-block">導航</a>
 </div>
 
-<!-- D4 -->
+<div class="card">
+<span class="tag tag-food">喬德夜市 21:00</span>
+<ul class="text-sm mt-2 list-disc pl-5">
+<li>紅大哥水門雞飯</li>
+<li>火山排骨</li>
+<li>水果西施果昔</li>
+<li>泰式生蝦/生醃</li>
+</ul>
+<a href="https://maps.app.goo.gl/Pxy1ZdXwXyihtVjC9" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+</div>
+
+
+<!-- DAY4 -->
 <div id="day4" class="day-section">
-<div class="card"><b class="text-lg">D4 行程</b><p class="text-sm text-gray-500 mt-1">（待補）</p></div>
+
+<div class="card">
+<span class="tag tag-spot">洽圖洽周末市集 10:00</span>
+<p class="text-sm text-gray-600 mt-1">MRT Chatuchak Park / BTS Mo Chit</p>
+<a href="https://maps.app.goo.gl/GJ9PQB5iN6h9aaja6" class="nav-btn mt-2 inline-block">導航</a>
 </div>
 
-<!-- D5 -->
+<div class="card">
+<span class="tag tag-spot">暹羅百麗宮 15:00</span>
+<a href="https://maps.app.goo.gl/cMB8njCpprZJNypp9" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+<div class="card">
+<span class="tag tag-spot">暹羅中心 16:00</span>
+<a href="https://maps.app.goo.gl/VWZZiW5xnQS2mh9r7" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+<div class="card">
+<span class="tag tag-spot">暹羅廣場 17:00</span>
+<a href="https://maps.app.goo.gl/ZwyRVTo6LDXD5aLz8" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+<div class="card">
+<span class="tag tag-spot">Central World 18:00</span>
+<a href="https://maps.app.goo.gl/Viy8bcETFTQcKav48" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+<div class="card">
+<span class="tag tag-food">Let's Relax Spa 20:00</span>
+<a href="https://maps.app.goo.gl/7UoeYniFh8oeRUfE9" class="nav-btn mt-2 inline-block">導航</a>
+</div>
+
+</div>
+
+
+<!-- DAY5 -->
 <div id="day5" class="day-section">
-<div class="card"><b class="text-lg">D5 行程</b><p class="text-sm text-gray-500 mt-1">（待補）</p></div>
-</div>
 
-<!-- INFO -->
-<div id="dayinfo" class="day-section">
 <div class="card">
-<h3 class="font-bold border-b pb-2 mb-2">🚨 緊急聯絡</h3>
-<p class="text-sm">報警/急救：191 / 1669</p>
-<p class="text-sm">觀光警察：1155</p>
+<span class="tag tag-spot">Emsphere / Or Tor Kor 10:00</span>
+<a href="https://maps.app.goo.gl/SbVpWEhg6ZVxsCHF8" class="nav-btn mt-2 inline-block">Emsphere</a>
+<a href="https://maps.app.goo.gl/LF7dYPYqb1Moaor98" class="nav-btn mt-2 inline-block">Or Tor Kor</a>
 </div>
 
 <div class="card">
-<h3 class="font-bold border-b pb-2 mb-2">💰 預算管理</h3>
-<div class="grid grid-cols-2 text-sm gap-2">
-<div>交通預算: 3500 THB</div>
-<div>飲食預算: 5000 THB</div>
+<b>回 Somerset Rama 9 取行李 13:00</b>
 </div>
+
+<div class="card">
+<b>包車前往機場 13:30（約45分鐘）</b>
 </div>
+
+<div class="card bg-blue-50">
+<div class="text-xs text-blue-600 font-bold">✈️ 回程 BR068</div>
+<div class="text-sm">BKK 17:15 → 21:50</div>
+<p class="text-sm text-red-500 mt-2">⚠ 先去退稅櫃台蓋章再辦理登機</p>
+</div>
+
 </div>
 
 </main>
@@ -179,7 +233,9 @@ document.getElementById('btn' + day).classList.replace('text-gray-600','text-whi
 window.scrollTo(0,0);
 }
 
-if ('serviceWorker' in navigator) {navigator.serviceWorker.register('sw.js');}
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('sw.js');
+}
 
 window.addEventListener("load", () => {
 setTimeout(() => {
